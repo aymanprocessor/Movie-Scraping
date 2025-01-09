@@ -1,0 +1,1592 @@
+/home/ubuntu/Movie-Scraping/main.py:269: PTBUserWarning: No `JobQueue` set up. To use `JobQueue`, you must install PTB via `pip install "python-telegram-bot[job-queue]"`.
+  if application.job_queue:
+2025-01-09 16:57:02,723 - __main__ - ERROR - Job queue is not available!
+2025-01-09 16:57:02,723 - __main__ - INFO - Bot is running...
+2025-01-09 16:57:02,825 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getMe "HTTP/1.1 200 OK"
+2025-01-09 16:57:02,848 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/deleteWebhook "HTTP/1.1 200 OK"
+2025-01-09 16:57:02,849 - telegram.ext.Application - INFO - Application started
+2025-01-09 16:57:12,892 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 16:57:22,907 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 16:57:32,921 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 16:57:42,991 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 16:57:53,016 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 16:57:54,111 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 16:57:54,111 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 16:57:59,196 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 16:57:59,197 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 16:58:05,293 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 16:58:05,294 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 16:58:12,882 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 16:58:12,883 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 16:58:19,719 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 16:58:19,719 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 16:58:30,375 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 16:58:30,376 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 16:58:45,916 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 16:58:45,916 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 16:59:01,473 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 16:59:01,474 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 16:59:18,592 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 16:59:18,592 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-01-09 16:59:18,593 - telegram.ext.Application - INFO - Application.stop() complete
+2025-01-09 17:01:09,496 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-09 17:01:09,496 - __main__ - INFO - Bot is running...
+2025-01-09 17:01:09,561 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getMe "HTTP/1.1 200 OK"
+2025-01-09 17:01:09,584 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/deleteWebhook "HTTP/1.1 200 OK"
+2025-01-09 17:01:09,586 - apscheduler.scheduler - INFO - Added job "check_new_movies" to job store "default"
+2025-01-09 17:01:09,586 - apscheduler.scheduler - INFO - Scheduler started
+2025-01-09 17:01:09,586 - telegram.ext.Application - INFO - Application started
+2025-01-09 17:01:13,610 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-09 17:01:13,611 - __main__ - INFO - Bot is running...
+2025-01-09 17:01:13,709 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getMe "HTTP/1.1 200 OK"
+2025-01-09 17:01:13,724 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/deleteWebhook "HTTP/1.1 200 OK"
+2025-01-09 17:01:13,725 - apscheduler.scheduler - INFO - Added job "check_new_movies" to job store "default"
+2025-01-09 17:01:13,725 - apscheduler.scheduler - INFO - Scheduler started
+2025-01-09 17:01:13,725 - telegram.ext.Application - INFO - Application started
+2025-01-09 17:01:13,757 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:01:13,758 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:01:17,774 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:01:17,775 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:01:18,786 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:01:18,787 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:01:19,496 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:06:19 UTC)" (scheduled at 2025-01-09 17:01:19.495559+00:00)
+2025-01-09 17:01:19,497 - __main__ - INFO - Checking for new movies...
+2025-01-09 17:01:20,416 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:01:20,914 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:01:21,814 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:01:22,712 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:01:23,670 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:06:23 UTC)" (scheduled at 2025-01-09 17:01:23.610271+00:00)
+2025-01-09 17:01:23,670 - __main__ - INFO - Checking for new movies...
+2025-01-09 17:01:23,807 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:01:24,889 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:01:25,887 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:01:26,069 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/sendPhoto "HTTP/1.1 200 OK"
+2025-01-09 17:01:26,077 - __main__ - INFO - Movie 'فيلم Ganapath 2023 مترجم اون لاين' marked as shown.
+2025-01-09 17:01:26,894 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:01:27,091 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:01:27,482 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:01:27,696 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 17:01:27,696 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:06:19 UTC)" executed successfully
+2025-01-09 17:01:27,987 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:01:29,073 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:01:29,585 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 17:01:29,585 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:06:23 UTC)" executed successfully
+2025-01-09 17:01:29,586 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:01:29,587 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:01:31,106 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:01:31,107 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:01:36,377 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:01:36,377 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:01:38,652 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:01:38,653 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:01:42,043 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:01:42,044 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:01:45,442 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:01:45,443 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:01:50,544 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:01:50,545 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:01:55,668 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:01:55,669 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:02:03,308 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:02:03,309 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:02:10,937 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:02:10,938 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:02:20,939 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:02:22,366 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:02:22,366 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:02:26,382 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:02:26,383 - telegram.ext.Updater - ERROR - Error while calling `get_updates` one more time to mark all fetched updates as read: %s. Suppressing error to ensure graceful shutdown. When polling for updates is restarted, updates may be fetched again. Please adjust timeouts via `ApplicationBuilder` or the parameter `get_updates_request` of `Bot`.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 432, in _get_updates_cleanup
+    await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:02:26,383 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-01-09 17:02:26,384 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-01-09 17:02:26,394 - telegram.ext.Application - INFO - Application.stop() complete
+2025-01-09 17:02:33,379 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:02:43,390 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:02:50,412 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:02:50,413 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-01-09 17:02:50,413 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-01-09 17:02:50,423 - telegram.ext.Application - INFO - Application.stop() complete
+2025-01-09 17:03:09,989 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-09 17:03:09,989 - __main__ - INFO - Bot is running...
+2025-01-09 17:03:10,039 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getMe "HTTP/1.1 200 OK"
+2025-01-09 17:03:10,057 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/deleteWebhook "HTTP/1.1 200 OK"
+2025-01-09 17:03:10,058 - apscheduler.scheduler - INFO - Added job "check_new_movies" to job store "default"
+2025-01-09 17:03:10,058 - apscheduler.scheduler - INFO - Scheduler started
+2025-01-09 17:03:10,058 - telegram.ext.Application - INFO - Application started
+2025-01-09 17:03:14,198 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:03:14,199 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:03:19,821 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:03:19,822 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:03:19,989 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:08:19 UTC)" (scheduled at 2025-01-09 17:03:19.988436+00:00)
+2025-01-09 17:03:19,990 - __main__ - INFO - Checking for new movies...
+2025-01-09 17:03:20,914 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:03:21,412 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:03:21,897 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:03:22,309 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:03:22,715 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:03:23,801 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:03:24,284 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 17:03:24,284 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:08:19 UTC)" executed successfully
+2025-01-09 17:03:29,682 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:03:29,683 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:03:35,401 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:03:35,402 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:03:44,266 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:03:44,267 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:03:57,263 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:03:57,264 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:04:14,910 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:04:16,626 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:04:16,627 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:04:27,641 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:04:37,664 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:04:37,999 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 409 Conflict"
+2025-01-09 17:04:38,000 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 744, in do_action
+    return action_cb_task.result()
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 4480, in get_updates
+    await self._post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 619, in _post
+    return await self._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/_bot.py", line 648, in _do_post
+    result = await request.post(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "/home/ubuntu/bot-env/lib/python3.10/site-packages/telegram/request/_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-01-09 17:04:40,387 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:04:40,467 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/sendMessage "HTTP/1.1 200 OK"
+2025-01-09 17:04:50,405 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:05:00,415 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:05:10,430 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:05:20,446 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:05:30,464 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:05:39,862 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:05:39,995 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/sendMessage "HTTP/1.1 200 OK"
+2025-01-09 17:05:49,975 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:06:00,011 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:06:10,023 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:06:20,035 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:06:30,053 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:06:40,073 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:06:50,100 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:07:00,112 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:07:10,137 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:07:20,147 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:07:22,865 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:07:22,959 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/sendMessage "HTTP/1.1 200 OK"
+2025-01-09 17:07:24,823 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:07:24,887 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/sendMessage "HTTP/1.1 200 OK"
+2025-01-09 17:07:25,690 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:07:26,091 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:07:26,486 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:07:26,885 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:07:27,390 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:07:27,474 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/sendMessage "HTTP/1.1 200 OK"
+2025-01-09 17:07:34,438 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:07:34,556 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/sendMessage "HTTP/1.1 200 OK"
+2025-01-09 17:07:36,560 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:07:36,632 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/sendMessage "HTTP/1.1 200 OK"
+2025-01-09 17:07:37,192 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/sendMessage "HTTP/1.1 200 OK"
+2025-01-09 17:07:39,222 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:07:39,271 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/sendMessage "HTTP/1.1 200 OK"
+2025-01-09 17:07:40,836 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:07:40,956 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/sendMessage "HTTP/1.1 200 OK"
+2025-01-09 17:07:41,791 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:07:41,932 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/sendMessage "HTTP/1.1 200 OK"
+2025-01-09 17:07:50,866 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:08:00,883 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:08:10,898 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:08:19,999 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:13:19 UTC)" (scheduled at 2025-01-09 17:08:19.988436+00:00)
+2025-01-09 17:08:19,999 - __main__ - INFO - Checking for new movies...
+2025-01-09 17:08:20,793 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:08:21,274 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:08:21,795 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:08:22,198 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:08:22,586 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:08:23,392 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:08:23,892 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 17:08:23,893 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:13:19 UTC)" executed successfully
+2025-01-09 17:08:23,893 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:08:33,906 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:08:43,922 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:08:53,966 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:09:03,996 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:09:14,009 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:09:24,032 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:09:34,046 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:09:44,063 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:09:54,077 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:10:04,091 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:10:14,129 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:10:24,146 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:10:34,165 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:10:44,193 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:10:54,207 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:11:04,219 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:11:14,231 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:11:24,247 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:11:34,258 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:11:44,269 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:11:54,285 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:12:04,300 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:12:14,316 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:12:24,339 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:12:34,356 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:12:44,369 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:12:54,388 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:13:04,421 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:13:14,477 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:13:19,995 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:18:19 UTC)" (scheduled at 2025-01-09 17:13:19.988436+00:00)
+2025-01-09 17:13:19,995 - __main__ - INFO - Checking for new movies...
+2025-01-09 17:13:21,002 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:13:21,387 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:13:21,783 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:13:22,185 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:13:22,583 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:13:23,386 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:13:23,773 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 17:13:23,773 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:18:19 UTC)" executed successfully
+2025-01-09 17:13:24,502 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:13:34,518 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:13:44,531 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:13:54,554 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:14:04,603 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:14:14,634 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:14:24,648 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:14:34,692 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:14:44,704 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:14:54,719 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:15:04,754 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:15:14,786 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:15:24,865 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:15:34,898 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:15:44,951 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:15:55,001 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:16:05,020 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:16:15,074 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:16:25,134 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:16:35,149 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:16:45,159 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:16:55,193 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:17:05,207 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:17:15,255 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:17:25,290 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:17:35,305 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:17:45,322 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:17:55,336 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:18:05,350 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:18:15,384 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:18:19,993 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:23:19 UTC)" (scheduled at 2025-01-09 17:18:19.988436+00:00)
+2025-01-09 17:18:19,994 - __main__ - INFO - Checking for new movies...
+2025-01-09 17:18:21,066 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:18:21,490 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:18:21,888 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:18:22,280 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:18:22,685 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:18:23,582 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:18:23,992 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 17:18:23,993 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:23:19 UTC)" executed successfully
+2025-01-09 17:18:25,398 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:18:35,411 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:18:45,430 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:18:55,457 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:19:05,477 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:19:15,492 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:19:25,510 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:19:35,531 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:19:45,553 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:19:55,604 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:20:05,646 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:20:15,670 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:20:25,689 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:20:35,713 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:20:45,732 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:20:55,770 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:21:05,803 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:21:15,833 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:21:25,880 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:21:35,923 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:21:45,946 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:21:55,997 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:22:06,080 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:22:16,119 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:22:26,188 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:22:36,240 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:22:46,262 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:22:56,293 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:23:06,310 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:23:16,343 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:23:19,992 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:28:19 UTC)" (scheduled at 2025-01-09 17:23:19.988436+00:00)
+2025-01-09 17:23:19,992 - __main__ - INFO - Checking for new movies...
+2025-01-09 17:23:20,795 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:23:21,189 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:23:26,227 - __main__ - ERROR - Error scraping movie details from https://www.tuktukcinma.com/%D9%81%D9%8A%D9%84%D9%85-dont-die-the-man-who-wants-to-live-forever-2025-%D9%85%D8%AA%D8%B1%D8%AC%D9%85-%D8%A7%D9%88%D9%86-%D9%84%D8%A7%D9%8A%D9%86/: Exceeded 30 redirects.
+2025-01-09 17:23:26,384 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:23:26,656 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/sendPhoto "HTTP/1.1 200 OK"
+2025-01-09 17:23:26,662 - __main__ - INFO - Movie 'فيلم Don’t Die: The Man Who Wants to Live Forever 2025 مترجم اون لاين' marked as shown.
+2025-01-09 17:23:27,083 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:23:27,479 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:23:28,480 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:23:28,882 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 17:23:28,882 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:28:19 UTC)" executed successfully
+2025-01-09 17:23:36,444 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:23:46,464 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:23:56,488 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:24:06,510 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:24:16,551 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:24:26,602 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:24:36,632 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:24:46,676 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:24:56,696 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:25:06,722 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:25:16,758 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:25:26,782 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:25:36,833 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:25:46,889 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:25:56,924 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:26:06,946 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:26:16,975 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:26:26,995 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:26:37,026 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:26:47,045 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:26:57,062 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:27:07,102 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:27:17,137 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:27:27,172 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:27:37,205 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:27:47,225 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:27:57,290 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:28:07,322 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:28:17,338 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:28:19,992 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:33:19 UTC)" (scheduled at 2025-01-09 17:28:19.988436+00:00)
+2025-01-09 17:28:19,992 - __main__ - INFO - Checking for new movies...
+2025-01-09 17:28:21,294 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:28:22,292 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:28:22,675 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:28:23,177 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:28:24,772 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:28:25,267 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 17:28:25,267 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:33:19 UTC)" executed successfully
+2025-01-09 17:28:27,377 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:28:37,418 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:28:47,438 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:28:57,459 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:29:07,482 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:29:17,500 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:29:27,553 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:29:37,591 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:29:47,733 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:29:57,864 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:30:07,904 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:30:17,925 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:30:27,956 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:30:37,978 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:30:48,022 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:30:58,052 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:31:08,076 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:31:18,091 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:31:28,147 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:31:38,202 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:31:48,225 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:31:58,307 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:32:08,343 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:32:18,451 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:32:28,532 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:32:38,570 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:32:48,617 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:32:58,648 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:33:08,675 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:33:18,713 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:33:19,991 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:38:19 UTC)" (scheduled at 2025-01-09 17:33:19.988436+00:00)
+2025-01-09 17:33:19,991 - __main__ - INFO - Checking for new movies...
+2025-01-09 17:33:20,878 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:33:21,282 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:33:21,690 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:33:22,194 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:33:22,980 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:33:23,408 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 17:33:23,408 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:38:19 UTC)" executed successfully
+2025-01-09 17:33:28,750 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:33:38,773 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:33:48,796 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:33:58,822 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:34:08,839 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:34:18,884 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:34:28,903 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:34:38,940 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:34:48,966 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:34:58,997 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:35:09,016 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:35:19,063 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:35:29,079 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:35:39,127 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:35:49,170 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:35:59,204 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:36:09,230 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:36:19,257 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:36:29,280 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:36:39,333 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:36:49,350 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:36:59,366 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:37:09,381 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:37:19,396 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:37:29,413 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:37:39,430 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:37:49,457 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:37:59,492 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:38:09,506 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:38:19,520 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:38:19,990 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:43:19 UTC)" (scheduled at 2025-01-09 17:38:19.988436+00:00)
+2025-01-09 17:38:19,990 - __main__ - INFO - Checking for new movies...
+2025-01-09 17:38:20,784 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:38:21,184 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:38:21,690 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:38:22,082 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:38:22,886 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:38:23,292 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 17:38:23,292 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:43:19 UTC)" executed successfully
+2025-01-09 17:38:29,542 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:38:39,562 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:38:49,585 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:38:59,599 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:39:09,623 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:39:19,637 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:39:29,656 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:39:39,680 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:39:49,707 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:39:59,732 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:40:09,749 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:40:19,763 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:40:29,785 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:40:39,802 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:40:49,820 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:40:59,835 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:41:09,851 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:41:19,903 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:41:29,937 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:41:39,955 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:41:49,974 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:41:59,994 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:42:10,010 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:42:20,027 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:42:30,041 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:42:40,061 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:42:50,076 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:43:00,097 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:43:10,123 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:43:19,998 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:48:19 UTC)" (scheduled at 2025-01-09 17:43:19.988436+00:00)
+2025-01-09 17:43:19,999 - __main__ - INFO - Checking for new movies...
+2025-01-09 17:43:20,882 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:43:21,402 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:43:21,785 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:43:22,182 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:43:22,985 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:43:23,390 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 17:43:23,391 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:48:19 UTC)" executed successfully
+2025-01-09 17:43:23,391 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:43:33,428 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:43:43,444 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:43:53,467 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:44:03,499 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:44:13,523 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:44:23,545 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:44:33,561 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:44:43,579 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:44:53,596 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:45:03,647 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:45:13,663 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:45:23,680 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:45:33,696 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:45:43,728 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:45:53,748 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:46:03,765 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:46:13,780 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:46:23,796 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:46:33,811 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:46:43,827 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:46:53,844 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:47:03,877 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:47:13,911 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:47:23,927 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:47:33,955 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:47:43,970 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:47:53,986 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:48:04,003 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:48:14,019 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:48:19,996 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:53:19 UTC)" (scheduled at 2025-01-09 17:48:19.988436+00:00)
+2025-01-09 17:48:19,996 - __main__ - INFO - Checking for new movies...
+2025-01-09 17:48:20,780 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:48:21,296 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:48:21,690 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:48:22,173 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:48:23,072 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:48:23,590 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 17:48:23,590 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:53:19 UTC)" executed successfully
+2025-01-09 17:48:24,051 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:48:34,065 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:48:44,080 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:48:54,097 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:49:04,115 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:49:14,208 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:49:24,222 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:49:34,239 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:49:44,260 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:49:54,276 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:50:04,291 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:50:14,371 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:50:24,395 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:50:34,448 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:50:44,470 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:50:54,485 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:51:04,535 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:51:14,548 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:51:24,595 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:51:34,609 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:51:44,623 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:51:54,656 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:52:04,679 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:52:14,693 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:52:24,709 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:52:34,724 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:52:44,748 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:52:54,769 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:53:04,845 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:53:14,861 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:53:19,994 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:58:19 UTC)" (scheduled at 2025-01-09 17:53:19.988436+00:00)
+2025-01-09 17:53:19,994 - __main__ - INFO - Checking for new movies...
+2025-01-09 17:53:20,885 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:53:21,278 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:53:21,677 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:53:22,109 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:53:22,977 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:53:23,382 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 17:53:23,382 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 17:58:19 UTC)" executed successfully
+2025-01-09 17:53:24,923 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:53:34,945 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:53:44,965 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:53:54,993 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:54:05,012 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:54:15,044 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:54:25,070 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:54:35,097 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:54:45,121 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:54:55,148 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:55:05,167 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:55:15,192 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:55:25,214 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:55:35,237 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:55:45,258 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:55:55,283 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:56:05,307 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:56:15,335 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:56:25,365 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:56:35,388 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:56:45,408 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:56:55,429 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:57:05,455 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:57:15,476 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:57:25,533 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:57:35,556 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:57:45,593 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:57:55,622 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:58:05,652 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:58:15,682 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:58:19,993 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 18:03:19 UTC)" (scheduled at 2025-01-09 17:58:19.988436+00:00)
+2025-01-09 17:58:19,994 - __main__ - INFO - Checking for new movies...
+2025-01-09 17:58:20,978 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:58:21,465 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:58:21,890 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:58:22,364 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:58:23,179 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 17:58:23,575 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 17:58:23,576 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 18:03:19 UTC)" executed successfully
+2025-01-09 17:58:25,709 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:58:35,740 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:58:45,794 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:58:55,932 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:59:05,970 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:59:16,048 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:59:26,080 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:59:36,110 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:59:46,128 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 17:59:56,159 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:00:06,179 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:00:16,204 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:00:26,224 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:00:36,263 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:00:46,290 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:00:56,312 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:01:06,338 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:01:16,360 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:01:26,386 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:01:36,406 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:01:46,427 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:01:56,481 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:02:06,508 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:02:16,535 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:02:26,628 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:02:36,654 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:02:46,683 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:02:56,702 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:03:06,720 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:03:16,738 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:03:19,992 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 18:08:19 UTC)" (scheduled at 2025-01-09 18:03:19.988436+00:00)
+2025-01-09 18:03:19,992 - __main__ - INFO - Checking for new movies...
+2025-01-09 18:03:20,976 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:03:21,482 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:03:21,881 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:03:22,368 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:03:23,178 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:03:23,684 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 18:03:23,684 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 18:08:19 UTC)" executed successfully
+2025-01-09 18:03:26,762 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:03:36,788 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:03:46,808 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:03:56,836 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:04:06,861 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:04:16,892 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:04:26,912 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:04:36,931 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:04:46,951 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:04:56,970 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:05:06,996 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:05:17,047 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:05:27,080 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:05:37,101 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:05:47,123 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:05:57,183 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:06:07,227 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:06:17,248 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:06:27,274 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:06:37,293 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:06:47,320 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:06:57,345 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:07:07,380 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:07:17,402 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:07:27,426 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:07:37,444 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:07:47,471 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:07:57,496 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:08:07,517 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:08:17,549 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:08:19,991 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 18:13:19 UTC)" (scheduled at 2025-01-09 18:08:19.988436+00:00)
+2025-01-09 18:08:19,991 - __main__ - INFO - Checking for new movies...
+2025-01-09 18:08:20,878 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:08:21,362 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:08:21,775 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:08:22,177 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:08:22,992 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:08:23,577 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 18:08:23,577 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 18:13:19 UTC)" executed successfully
+2025-01-09 18:08:27,569 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:08:37,591 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:08:47,616 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:08:57,642 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:09:07,660 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:09:17,681 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:09:27,704 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:09:37,728 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:09:47,746 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:09:57,770 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:10:07,823 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:10:17,858 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:10:27,895 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:10:37,918 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:10:47,938 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:10:57,954 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:11:07,971 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:11:17,987 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:11:28,010 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:11:38,037 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:11:48,053 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:11:58,087 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:12:08,104 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:12:18,120 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:12:28,154 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:12:38,181 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:12:48,219 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:12:58,243 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:13:08,266 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:13:18,281 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:13:19,991 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 18:18:19 UTC)" (scheduled at 2025-01-09 18:13:19.988436+00:00)
+2025-01-09 18:13:19,991 - __main__ - INFO - Checking for new movies...
+2025-01-09 18:13:20,780 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:13:21,265 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:13:21,676 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:13:22,076 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:13:22,983 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:13:23,461 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 18:13:23,462 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 18:18:19 UTC)" executed successfully
+2025-01-09 18:13:28,301 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:13:38,316 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:13:48,332 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:13:58,350 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:14:08,365 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:14:18,381 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:14:28,398 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:14:38,414 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:14:48,459 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:14:58,477 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:15:08,501 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:15:18,516 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:15:28,541 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:15:38,558 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:15:48,573 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:15:58,590 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:16:08,606 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:16:18,621 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:16:28,638 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:16:38,656 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:16:48,671 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:16:58,686 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:17:08,704 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:17:18,722 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:17:28,739 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:17:38,754 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:17:48,805 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:17:58,830 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:18:08,868 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:18:18,889 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:18:19,990 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 18:23:19 UTC)" (scheduled at 2025-01-09 18:18:19.988436+00:00)
+2025-01-09 18:18:19,990 - __main__ - INFO - Checking for new movies...
+2025-01-09 18:18:20,786 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:18:21,276 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:18:21,674 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:18:22,081 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:18:22,979 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:18:23,369 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 18:18:23,369 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 18:23:19 UTC)" executed successfully
+2025-01-09 18:18:28,906 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:18:38,928 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:18:48,944 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:18:58,967 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:19:08,984 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:19:19,008 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:19:29,026 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:19:39,041 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:19:49,057 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:19:59,077 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:20:09,093 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:20:19,133 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:20:29,148 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:20:39,165 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:20:49,181 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:20:59,212 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:21:09,231 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:21:19,248 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:21:29,268 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:21:39,304 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:21:49,321 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:21:59,339 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:22:09,386 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:22:19,407 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:22:29,425 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:22:39,442 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:22:49,457 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:22:59,473 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:23:09,490 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:23:19,505 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:23:19,989 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 18:28:19 UTC)" (scheduled at 2025-01-09 18:23:19.988436+00:00)
+2025-01-09 18:23:19,990 - __main__ - INFO - Checking for new movies...
+2025-01-09 18:23:20,778 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:23:21,179 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:23:21,612 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:23:22,078 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:23:23,085 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:23:23,514 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 18:23:23,514 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 18:28:19 UTC)" executed successfully
+2025-01-09 18:23:29,522 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:23:39,540 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:23:49,556 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:23:59,573 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:24:09,591 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:24:19,608 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:24:29,626 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:24:39,721 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:24:49,758 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:24:59,793 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:25:09,811 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:25:19,831 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:25:29,846 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:25:39,906 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:25:49,938 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:25:59,960 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:26:09,981 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:26:19,997 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:26:30,015 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:26:40,037 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:26:50,068 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:27:00,081 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:27:10,091 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:27:20,102 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:27:30,112 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:27:40,133 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:27:50,143 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:28:00,153 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:28:10,166 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:28:19,998 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 18:33:19 UTC)" (scheduled at 2025-01-09 18:28:19.988436+00:00)
+2025-01-09 18:28:19,999 - __main__ - INFO - Checking for new movies...
+2025-01-09 18:28:20,877 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:28:21,280 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:28:22,188 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:28:23,263 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:28:24,577 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:28:24,965 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 18:28:24,965 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 18:33:19 UTC)" executed successfully
+2025-01-09 18:28:24,966 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:28:34,987 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:28:45,013 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:28:55,024 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:29:05,053 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:29:15,066 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:29:25,075 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:29:35,087 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:29:45,104 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:29:55,114 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:30:05,124 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:30:15,137 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:30:25,153 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:30:35,164 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:30:45,174 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:30:55,184 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:31:05,197 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:31:15,207 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:31:25,234 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:31:35,245 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:31:45,268 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:31:55,279 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:32:05,295 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:32:15,305 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:32:25,359 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:32:35,370 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:32:45,381 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:32:55,393 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:33:05,428 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:33:15,447 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:33:19,993 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 18:38:19 UTC)" (scheduled at 2025-01-09 18:33:19.988436+00:00)
+2025-01-09 18:33:19,993 - __main__ - INFO - Checking for new movies...
+2025-01-09 18:33:20,777 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:33:21,184 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:33:21,684 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:33:22,074 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:33:22,878 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:33:23,266 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 18:33:23,266 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 18:38:19 UTC)" executed successfully
+2025-01-09 18:33:25,458 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:33:35,471 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:33:45,481 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:33:55,495 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:34:05,508 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:34:15,555 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:34:25,567 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:34:35,578 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:34:45,589 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:34:55,602 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:35:05,617 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:35:15,627 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:35:25,644 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:35:35,656 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:35:45,666 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:35:55,682 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:36:05,694 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:36:15,709 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:36:25,719 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:36:35,730 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:36:45,742 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:36:55,754 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:37:05,764 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:37:15,804 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:37:25,814 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:37:35,828 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:37:45,837 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:37:55,847 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:38:05,862 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:38:15,876 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:38:19,992 - apscheduler.executors.default - INFO - Running job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 18:43:19 UTC)" (scheduled at 2025-01-09 18:38:19.988436+00:00)
+2025-01-09 18:38:19,992 - __main__ - INFO - Checking for new movies...
+2025-01-09 18:38:20,892 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:38:21,282 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:38:21,791 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:38:22,173 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:38:23,077 - __main__ - WARNING - Error parsing movie item: 'NoneType' object has no attribute 'get'
+2025-01-09 18:38:23,464 - __main__ - INFO - Finished checking for new movies.
+2025-01-09 18:38:23,464 - apscheduler.executors.default - INFO - Job "check_new_movies (trigger: interval[0:05:00], next run at: 2025-01-09 18:43:19 UTC)" executed successfully
+2025-01-09 18:38:25,886 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:38:35,898 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:38:45,918 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:38:55,929 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:39:05,940 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:39:15,950 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:39:25,962 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:39:35,973 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:39:45,985 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:39:55,996 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:40:06,007 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:40:16,020 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
+2025-01-09 18:40:26,036 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0/getUpdates "HTTP/1.1 200 OK"
