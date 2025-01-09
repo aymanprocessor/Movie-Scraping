@@ -1,5 +1,0 @@
-    url_map = {
-        "English Movies": "https://eg1.tuktuksu.cfd/category/movies-2/%D8%A7%D9%81%D9%84%D8%A7%D9%85-%D8%A7%D8%AC%D9%86%D8%A8%D9%8A/",
-        "Hindi Movies": "https://eg1.tuktuksu.cfd/category/movies-2/%d8%a7%d9%81%d9%84%d8%a7%d9%85-%d9%87%d9%86%d8%af%d9%89/",
-        "Asian Movies": "https://eg1.tuktuksu.cfd/category/movies-2/%d8%a7%d9%81%d9%84%d8%a7%d9%85-%d8%a7%d8%b3%d9%8a%d9%88%d9%8a/"
-    }

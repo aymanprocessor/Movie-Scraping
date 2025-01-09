@@ -2,10 +2,15 @@ import os
 import logging
 import re
 import sqlite3
+import json
 import requests
 from bs4 import BeautifulSoup
 from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
+from dotenv import load_dotenv  # Import the dotenv module
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Enable logging
 logging.basicConfig(
@@ -19,10 +24,18 @@ CHAT_ID = os.getenv("CHAT_ID")
 
 if not BOT_TOKEN or not CHAT_ID:
     raise ValueError(
-        "Please set the BOT_TOKEN and CHAT_ID environment variables.")
+        "Please set the BOT_TOKEN and CHAT_ID environment variables in the .env file."
+    )
 
 # SQLite database file
 DATABASE_FILE = "movies.db"
+
+# Load URLs from the JSON file
+
+
+def load_urls():
+    with open('urls.json', 'r') as file:
+        return json.load(file)
 
 # Initialize the database
 def initialize_database():
@@ -244,11 +257,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Handle menu selections
 async def handle_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = update.message.text
-    url_map = {
-        "English Movies": "https://eg1.tuktuksu.cfd/category/movies-2/%D8%A7%D9%81%D9%84%D8%A7%D9%85-%D8%A7%D8%AC%D9%86%D8%A8%D9%8A/",
-        "Hindi Movies": "https://eg1.tuktuksu.cfd/category/movies-2/%d8%a7%d9%81%d9%84%d8%a7%d9%85-%d9%87%d9%86%d8%af%d9%89/",
-        "Asian Movies": "https://eg1.tuktuksu.cfd/category/movies-2/%d8%a7%d9%81%d9%84%d8%a7%d9%85-%d8%a7%d8%b3%d9%8a%d9%88%d9%8a/"
-    }
+    url_map = load_urls()  # Load URLs from the JSON file
 
     if text in url_map:
         await update.message.reply_text(f"Fetching {text}...", reply_markup=ReplyKeyboardRemove())
@@ -261,11 +270,7 @@ async def handle_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Periodic task to check for new movies
 async def check_new_movies(context: ContextTypes.DEFAULT_TYPE):
     logger.info("Checking for new movies...")
-    url_map = {
-        "English Movies": "https://eg1.tuktuksu.cfd/category/movies-2/%D8%A7%D9%81%D9%84%D8%A7%D9%85-%D8%A7%D8%AC%D9%86%D8%A8%D9%8A/",
-        "Hindi Movies": "https://eg1.tuktuksu.cfd/category/movies-2/%d8%a7%d9%81%d9%84%d8%a7%d9%85-%d9%87%d9%86%d8%af%d9%89/",
-        "Asian Movies": "https://eg1.tuktuksu.cfd/category/movies-2/%d8%a7%d9%81%d9%84%d8%a7%d9%85-%d8%a7%d8%b3%d9%8a%d9%88%d9%8a/"
-    }
+    url_map = load_urls()  # Load URLs from the JSON file
 
     for category, url in url_map.items():
         try:
