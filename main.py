@@ -1,11 +1,12 @@
+import os
+import logging
+import re
 import requests
 from bs4 import BeautifulSoup
 from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
-import logging
-import re
-import sqlite3
-import os
+import psycopg2
+from psycopg2 import sql
 
 # Enable logging
 logging.basicConfig(
@@ -13,92 +14,92 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# SQLite database file
-DATABASE_FILE = "movies.db"
+# Load environment variables
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
+DATABASE_URL = os.getenv("DATABASE_URL")
 
-# Function to initialize the SQLite database
+if not BOT_TOKEN or not CHAT_ID or not DATABASE_URL:
+    raise ValueError(
+        "Please set the BOT_TOKEN, CHAT_ID, and DATABASE_URL environment variables.")
+
+# Initialize the database
 def initialize_database():
-    if not os.path.exists(DATABASE_FILE):
-        conn = sqlite3.connect(DATABASE_FILE)
-        cursor = conn.cursor()
-        cursor.execute('''
-            CREATE TABLE shown_movies (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                title TEXT UNIQUE,
-                genreList TEXT,
-                release_year TEXT,
-                quality TEXT,
-                rating TEXT,
-                story TEXT,
-                link TEXT,
-                added_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            )
-        ''')
-        conn.commit()
-        conn.close()
+    try:
+        with psycopg2.connect(DATABASE_URL) as conn:
+            with conn.cursor() as cursor:
+                cursor.execute('''
+                    CREATE TABLE IF NOT EXISTS shown_movies (
+                        id SERIAL PRIMARY KEY,
+                        title TEXT UNIQUE,
+                        genreList TEXT,
+                        release_year TEXT,
+                        quality TEXT,
+                        rating TEXT,
+                        story TEXT,
+                        link TEXT,
+                        hashtag TEXT,
+                        added_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                    )
+                ''')
+                conn.commit()
+                logger.info("Database initialized successfully.")
+    except Exception as e:
+        logger.error(f"Error initializing database: {e}")
 
-# Function to check if a movie has been shown
+# Check if a movie has been shown
 def is_movie_shown(title):
-    conn = sqlite3.connect(DATABASE_FILE)
-    cursor = conn.cursor()
-    cursor.execute("SELECT title FROM shown_movies WHERE title = ?", (title,))
-    result = cursor.fetchone()
-    conn.close()
-    return result is not None
+    try:
+        with psycopg2.connect(DATABASE_URL) as conn:
+            with conn.cursor() as cursor:
+                cursor.execute(
+                    "SELECT title FROM shown_movies WHERE title = %s", (title,))
+                result = cursor.fetchone()
+                return result is not None
+    except Exception as e:
+        logger.error(f"Error checking if movie is shown: {e}")
+        return False
 
-# Function to mark a movie as shown
-def mark_movie_shown(title, genreList, release_year, quality, rating, story, link):
-    conn = sqlite3.connect(DATABASE_FILE)
-    cursor = conn.cursor()
-    cursor.execute("""
-    INSERT OR IGNORE INTO shown_movies 
-    (title, genreList, release_year, quality, rating, story, link) 
-    VALUES (?, ?, ?, ?, ?, ?, ?)
-""", (title, genreList, release_year, quality, rating, story, link))
-    conn.commit()
-    conn.close()
+# Mark a movie as shown
 
-# Function to escape Markdown special characters
+
+def mark_movie_shown(title, genreList, release_year, quality, rating, story, link, hashtag):
+    try:
+        with psycopg2.connect(DATABASE_URL) as conn:
+            with conn.cursor() as cursor:
+                cursor.execute("""
+                    INSERT INTO shown_movies 
+                    (title, genreList, release_year, quality, rating, story, link, hashtag) 
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                    ON CONFLICT (title) DO NOTHING
+                """, (title, genreList, release_year, quality, rating, story, link, hashtag))
+                conn.commit()
+                logger.info(f"Movie '{title}' marked as shown.")
+    except Exception as e:
+        logger.error(f"Error marking movie as shown: {e}")
+
+# Escape Markdown special characters
 def escape_markdown(text):
-    escape_chars = r"\_*[]()~`>#+-=|{}.!"
+    escape_chars = r"\_*[]()~`>#+-=|{}!"
     return re.sub(f"([{re.escape(escape_chars)}])", r"\\\1", text)
 
-# Function to scrape movie details (story, release year, quality)
+# Scrape movie details
 def scrape_movie_details(movie_url):
     try:
         response = requests.get(movie_url)
         response.raise_for_status()
         soup = BeautifulSoup(response.content, 'html.parser')
 
-        # Extract story
-        story = ""
-        story_div = soup.find('div', class_='story')
-        if story_div:
-            story = story_div.find('p').text.strip()
-
-        # Extract release year
-        release_year = ""
-        release_year_li = soup.find('li', string=re.compile(r'موعد الصدور :'))
-        if release_year_li:
-            release_year = release_year_li.find('a').text.strip()
-
-        # Extract quality
-        quality = ""
-        quality_li = soup.find('li', string=re.compile(r'جودة الفيلم :'))
-        if quality_li:
-            quality = quality_li.find('a').text.strip()
-
-        # Extract rating
-        rating = ""
-        rating_div = soup.find('div', class_='imdbS')
-        if rating_div:
-            rating = rating_div.find('strong').text.strip()
-
-        # Extract IMDb link
-        imdbLink = ""
-        imdbLink_div = soup.find('div', class_='imdbS')
-        if imdbLink_div:
-            imdbLink = imdbLink_div.find('a').get('href', '')
+        story = soup.find('div', class_='story').find(
+            'p').text.strip() if soup.find('div', class_='story') else ""
+        release_year = soup.find('li', string=re.compile(r'موعد الصدور :')).find(
+            'a').text.strip() if soup.find('li', string=re.compile(r'موعد الصدور :')) else ""
+        quality = soup.find('li', string=re.compile(r'جودة الفيلم :')).find(
+            'a').text.strip() if soup.find('li', string=re.compile(r'جودة الفيلم :')) else ""
+        rating = soup.find('div', class_='imdbS').find(
+            'strong').text.strip() if soup.find('div', class_='imdbS') else ""
+        imdbLink = soup.find('div', class_='imdbS').find('a').get(
+            'href', '') if soup.find('div', class_='imdbS') else ""
 
         return {
             'story': story,
@@ -111,52 +112,33 @@ def scrape_movie_details(movie_url):
         logger.error(f"Error scraping movie details from {movie_url}: {e}")
         return {}
 
-# Function to scrape movies from a given URL
+# Scrape and send movies
 async def scrape_and_send_movies(chat_id: str, url: str, context: ContextTypes.DEFAULT_TYPE = None, notify_no_movies: bool = True, category: str = None):
     try:
         response = requests.get(url)
         response.raise_for_status()
         soup = BeautifulSoup(response.content, 'html.parser')
 
-        # Track if any movies were sent
         movies_sent = False
-
-        # Loop through each movie, scrape details, and send them immediately
         for item in soup.find_all('div', class_='Block--Item'):
             try:
-                # Scrape basic details
                 title = item.find('h3')
                 if not title:
-                    logger.warning("Skipping movie: Title not found")
                     continue
-                title = escape_markdown(title.text.strip())  # Escape Markdown in title
+                title = escape_markdown(title.text.strip())
 
-                # Skip if the movie has already been shown
                 if is_movie_shown(title):
                     continue
 
-                # Extract genres
-                genres = []
-                genre_elements = item.find_all('li')
-                if genre_elements:
-                    genres = [escape_markdown(genre.text.strip()) for genre in genre_elements]
+                genres = [escape_markdown(genre.text.strip())
+                          for genre in item.find_all('li')]
+                poster = item.find('img').get(
+                    'data-src', '') if item.find('img') else ''
+                link = item.find('a').get('href', '') if item.find('a') else ''
 
-                # Extract poster URL
-                poster = item.find('img')
-                if poster:
-                    poster = poster.get('data-src', '')
-                else:
-                    poster = ''
-
-                # Extract movie link
-                link = item.find('a')
-                if link:
-                    link = link.get('href', '')
-                else:
-                    logger.warning(f"Skipping movie {title}: Link not found")
+                if not link:
                     continue
 
-                # Scrape additional details from the movie's page
                 movie_details = scrape_movie_details(link)
                 titleName = escape_markdown(title)
                 genreList = ', '.join(genres)
@@ -166,7 +148,9 @@ async def scrape_and_send_movies(chat_id: str, url: str, context: ContextTypes.D
                 imdbLink = movie_details.get('imdbLink', '')
                 story = escape_markdown(movie_details.get('story', 'No story available.'))
 
-                # Prepare the caption
+                # Add the category as a hashtag
+                hashtag = f"#{category.replace(' ', '')}" if category else ""
+
                 caption = (
                     f"🎥 **Title:** {titleName}\n"
                     f"📚 **Genres:** {genreList}\n"
@@ -174,22 +158,17 @@ async def scrape_and_send_movies(chat_id: str, url: str, context: ContextTypes.D
                     f"🎞️ **Quality:** {quality}\n"
                 )
 
-                # Add rating only if IMDb link is available
                 if imdbLink:
                     caption += f"⭐ **Rating:** [{rating}]({imdbLink})\n"
                 else:
                     caption += f"⭐ **Rating:** {rating}\n"
 
-                caption += (
-                    f"📖 **Story:**\n {story}\n"
-                   # f"#{category.replace(' ', '_')}"  # Add category as a hashtag
-                )
+                caption += f"📖 **Story:**\n {story}\n"
+                caption += f"{hashtag}\n"  # Add the hashtag at the end
 
-                # Create a "Watch Now" button
                 watch_now_button = InlineKeyboardButton("Watch Now", url=link)
                 keyboard = InlineKeyboardMarkup([[watch_now_button]])
 
-                # Send the poster as an image with the caption and button
                 if poster:
                     await context.bot.send_photo(
                         chat_id=chat_id,
@@ -206,16 +185,14 @@ async def scrape_and_send_movies(chat_id: str, url: str, context: ContextTypes.D
                         reply_markup=keyboard
                     )
 
-                # Mark the movie as shown
-                mark_movie_shown(title, genreList, release_year, quality, rating, story, link)
-
-                # Mark that at least one movie was sent
+                # Pass the hashtag to mark_movie_shown
+                mark_movie_shown(title, genreList, release_year,
+                                 quality, rating, story, link, hashtag)
                 movies_sent = True
             except Exception as e:
                 logger.warning(f"Error parsing movie item: {e}")
                 continue
 
-        # If no movies were sent and notify_no_movies is True, notify the user
         if not movies_sent and notify_no_movies:
             await context.bot.send_message(
                 chat_id=chat_id,
@@ -229,17 +206,17 @@ async def scrape_and_send_movies(chat_id: str, url: str, context: ContextTypes.D
             text="An error occurred while fetching movies. Please try again later.",
             reply_markup=ReplyKeyboardRemove()
         )
-        
-# Telegram bot command: /start
+
+# Start command
+
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    # Define the menu options
     keyboard = [
         ["English Movies", "Hindi Movies"],
         ["Asian Movies", "Cancel"]
     ]
-    reply_markup = ReplyKeyboardMarkup(keyboard, one_time_keyboard=False, resize_keyboard=True)
-
-    # Send the menu
+    reply_markup = ReplyKeyboardMarkup(
+        keyboard, one_time_keyboard=False, resize_keyboard=True)
     await update.message.reply_text(
         "🎬 Welcome to the Movie Bot! 🍿\n"
         "Choose a movie category:",
@@ -249,8 +226,6 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Handle menu selections
 async def handle_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = update.message.text
-
-    # Map menu options to URLs
     url_map = {
         "English Movies": "https://eg1.tuktuksu.cfd/category/movies-2/%D8%A7%D9%81%D9%84%D8%A7%D9%85-%D8%A7%D8%AC%D9%86%D8%A8%D9%8A/",
         "Hindi Movies": "https://eg1.tuktuksu.cfd/category/movies-2/%d8%a7%d9%81%d9%84%d8%a7%d9%85-%d9%87%d9%86%d8%af%d9%89/",
@@ -273,35 +248,45 @@ async def check_new_movies(context: ContextTypes.DEFAULT_TYPE):
         "Hindi Movies": "https://eg1.tuktuksu.cfd/category/movies-2/%d8%a7%d9%81%d9%84%d8%a7%d9%85-%d9%87%d9%86%d8%af%d9%89/",
         "Asian Movies": "https://eg1.tuktuksu.cfd/category/movies-2/%d8%a7%d9%81%d9%84%d8%a7%d9%85-%d8%a7%d8%b3%d9%8a%d9%88%d9%8a/"
     }
-    # Replace 'CHAT_ID' with the actual chat ID where you want to send updates
-    chat_id = "203409328"  # Example: "-1001234567890" for a group or "123456789" for a user
 
     for category, url in url_map.items():
-        # Call scrape_and_send_movies with the chat ID, context, and category
-        await scrape_and_send_movies(chat_id, url, context, notify_no_movies=False, category=category)
+        try:
+            await scrape_and_send_movies(CHAT_ID, url, context, notify_no_movies=False, category=category)
+        except Exception as e:
+            logger.error(f"Error checking new movies for {category}: {e}")
 
     logger.info("Finished checking for new movies.")
 
-# Main function to start the bot
+# Help command
+
+
+async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    help_text = (
+        "🎬 **Movie Bot Help** 🍿\n\n"
+        "Use the following commands:\n"
+        "/start - Start the bot and show the menu.\n"
+        "/help - Show this help message.\n\n"
+        "Choose a category from the menu to get movie recommendations."
+    )
+    await update.message.reply_text(help_text, parse_mode="Markdown")
+
+# Main function
+
+
 def main():
-    # Initialize the database
     initialize_database()
+    application = Application.builder().token(BOT_TOKEN).build()
 
-    # Replace 'YOUR_API_TOKEN' with your actual Telegram bot token
-    application = Application.builder().token("7812798648:AAH8cZvRraKyRjhnxJ8UZzAnkMQKfcYbsS0").build()
-
-    # Add command and message handlers
     application.add_handler(CommandHandler("start", start))
+    application.add_handler(CommandHandler("help", help_command))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_menu))
 
-    # # Schedule the periodic task to check for new movies every 5 minutes
-    # job_queue = application.job_queue
-    # if job_queue:
-    #     job_queue.run_repeating(check_new_movies, interval=300, first=10)  # Every 5 minutes (300 seconds)
-    # else:
-    #     logger.error("Job queue is not available!")
+    if application.job_queue:
+        application.job_queue.run_repeating(
+            check_new_movies, interval=300, first=10)
+    else:
+        logger.error("Job queue is not available!")
 
-    # Start the bot
     logger.info("Bot is running...")
     application.run_polling()
 
