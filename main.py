@@ -1,12 +1,11 @@
 import os
 import logging
 import re
+import sqlite3
 import requests
 from bs4 import BeautifulSoup
 from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
-import psycopg2
-from psycopg2 import sql
 
 # Enable logging
 logging.basicConfig(
@@ -17,66 +16,58 @@ logger = logging.getLogger(__name__)
 # Load environment variables
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
-DATABASE_URL = os.getenv("DATABASE_URL")
 
-if not BOT_TOKEN or not CHAT_ID or not DATABASE_URL:
+if not BOT_TOKEN or not CHAT_ID:
     raise ValueError(
-        "Please set the BOT_TOKEN, CHAT_ID, and DATABASE_URL environment variables.")
+        "Please set the BOT_TOKEN and CHAT_ID environment variables.")
+
+# SQLite database file
+DATABASE_FILE = "movies.db"
 
 # Initialize the database
 def initialize_database():
-    try:
-        with psycopg2.connect(DATABASE_URL) as conn:
-            with conn.cursor() as cursor:
-                cursor.execute('''
-                    CREATE TABLE IF NOT EXISTS shown_movies (
-                        id SERIAL PRIMARY KEY,
-                        title TEXT UNIQUE,
-                        genreList TEXT,
-                        release_year TEXT,
-                        quality TEXT,
-                        rating TEXT,
-                        story TEXT,
-                        link TEXT,
-                        hashtag TEXT,
-                        added_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-                    )
-                ''')
-                conn.commit()
-                logger.info("Database initialized successfully.")
-    except Exception as e:
-        logger.error(f"Error initializing database: {e}")
+    if not os.path.exists(DATABASE_FILE):
+        conn = sqlite3.connect(DATABASE_FILE)
+        cursor = conn.cursor()
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS shown_movies (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                title TEXT UNIQUE,
+                genreList TEXT,
+                release_year TEXT,
+                quality TEXT,
+                rating TEXT,
+                story TEXT,
+                link TEXT,
+                hashtag TEXT,
+                added_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        ''')
+        conn.commit()
+        conn.close()
+        logger.info("Database initialized successfully.")
 
 # Check if a movie has been shown
 def is_movie_shown(title):
-    try:
-        with psycopg2.connect(DATABASE_URL) as conn:
-            with conn.cursor() as cursor:
-                cursor.execute(
-                    "SELECT title FROM shown_movies WHERE title = %s", (title,))
-                result = cursor.fetchone()
-                return result is not None
-    except Exception as e:
-        logger.error(f"Error checking if movie is shown: {e}")
-        return False
+    conn = sqlite3.connect(DATABASE_FILE)
+    cursor = conn.cursor()
+    cursor.execute("SELECT title FROM shown_movies WHERE title = ?", (title,))
+    result = cursor.fetchone()
+    conn.close()
+    return result is not None
 
 # Mark a movie as shown
-
-
 def mark_movie_shown(title, genreList, release_year, quality, rating, story, link, hashtag):
-    try:
-        with psycopg2.connect(DATABASE_URL) as conn:
-            with conn.cursor() as cursor:
-                cursor.execute("""
-                    INSERT INTO shown_movies 
-                    (title, genreList, release_year, quality, rating, story, link, hashtag) 
-                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-                    ON CONFLICT (title) DO NOTHING
-                """, (title, genreList, release_year, quality, rating, story, link, hashtag))
-                conn.commit()
-                logger.info(f"Movie '{title}' marked as shown.")
-    except Exception as e:
-        logger.error(f"Error marking movie as shown: {e}")
+    conn = sqlite3.connect(DATABASE_FILE)
+    cursor = conn.cursor()
+    cursor.execute("""
+        INSERT OR IGNORE INTO shown_movies 
+        (title, genreList, release_year, quality, rating, story, link, hashtag) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    """, (title, genreList, release_year, quality, rating, story, link, hashtag))
+    conn.commit()
+    conn.close()
+    logger.info(f"Movie '{title}' marked as shown.")
 
 # Escape Markdown special characters
 def escape_markdown(text):
@@ -145,7 +136,7 @@ async def scrape_and_send_movies(chat_id: str, url: str, context: ContextTypes.D
                 release_year = escape_markdown(movie_details.get('release_year', 'N/A'))
                 quality = escape_markdown(movie_details.get('quality', 'N/A'))
                 rating = escape_markdown(movie_details.get('rating', 'N/A'))
-                imdbLink = movie_details.get('imdbLink', '')
+                imdbLink = movie_details.get('imdbLink', 'N/A')
                 story = escape_markdown(movie_details.get('story', 'No story available.'))
 
                 # Add the category as a hashtag
@@ -208,8 +199,6 @@ async def scrape_and_send_movies(chat_id: str, url: str, context: ContextTypes.D
         )
 
 # Start command
-
-
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
         ["English Movies", "Hindi Movies"],
@@ -258,8 +247,6 @@ async def check_new_movies(context: ContextTypes.DEFAULT_TYPE):
     logger.info("Finished checking for new movies.")
 
 # Help command
-
-
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     help_text = (
         "🎬 **Movie Bot Help** 🍿\n\n"
@@ -271,8 +258,6 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(help_text, parse_mode="Markdown")
 
 # Main function
-
-
 def main():
     initialize_database()
     application = Application.builder().token(BOT_TOKEN).build()
