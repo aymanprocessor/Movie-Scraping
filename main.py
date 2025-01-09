@@ -77,8 +77,15 @@ def escape_markdown(text):
 # Scrape movie details
 def scrape_movie_details(movie_url):
     try:
-        response = requests.get(movie_url)
+        response = requests.get(movie_url, allow_redirects=True)
         response.raise_for_status()
+
+        # Check if the response status code is 200 OK
+        if response.status_code != 200:
+            logger.error(
+                f"Received non-200 status code: {response.status_code}")
+            return {}
+
         soup = BeautifulSoup(response.content, 'html.parser')
 
         story = soup.find('div', class_='story').find(
@@ -99,6 +106,9 @@ def scrape_movie_details(movie_url):
             'rating': rating,
             'imdbLink': imdbLink
         }
+    except requests.exceptions.TooManyRedirects:
+        logger.error(f"Too many redirects for URL: {movie_url}")
+        return {}
     except requests.RequestException as e:
         logger.error(f"Error scraping movie details from {movie_url}: {e}")
         return {}
@@ -106,8 +116,20 @@ def scrape_movie_details(movie_url):
 # Scrape and send movies
 async def scrape_and_send_movies(chat_id: str, url: str, context: ContextTypes.DEFAULT_TYPE = None, notify_no_movies: bool = True, category: str = None):
     try:
-        response = requests.get(url)
+        response = requests.get(url, allow_redirects=True)
         response.raise_for_status()
+
+        # Check if the response status code is 200 OK
+        if response.status_code != 200:
+            logger.error(
+                f"Received non-200 status code: {response.status_code}")
+            await context.bot.send_message(
+                chat_id=chat_id,
+                text="An error occurred while fetching movies. Please try again later.",
+                reply_markup=ReplyKeyboardRemove()
+            )
+            return
+
         soup = BeautifulSoup(response.content, 'html.parser')
 
         movies_sent = False
@@ -190,6 +212,13 @@ async def scrape_and_send_movies(chat_id: str, url: str, context: ContextTypes.D
                 text="No new movies found in this category.",
                 reply_markup=ReplyKeyboardRemove()
             )
+    except requests.exceptions.TooManyRedirects:
+        logger.error(f"Too many redirects for URL: {url}")
+        await context.bot.send_message(
+            chat_id=chat_id,
+            text="Too many redirects encountered. Please try again later.",
+            reply_markup=ReplyKeyboardRemove()
+        )
     except requests.RequestException as e:
         logger.error(f"Error scraping movies: {e}")
         await context.bot.send_message(
